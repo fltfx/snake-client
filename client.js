@@ -20,8 +20,20 @@ const connect = function () {
     console.log('Server says: ', data);
   });
 
+  //display name of snake
   conn.on('connect', () => {
     conn.write('Name: CYW');
+  });
+
+  //move up one block
+  conn.on('connect', () => {
+    // //setTimeout tests
+    // setTimeout(function(){ conn.write('Move: up'); }, 1000);
+    // setTimeout(function(){ conn.write('Move: left'); }, 2000);
+    // setTimeout(function(){ conn.write('Move: up'); }, 3000);
+    // //setInterval tests
+    // setInterval(function(){ conn.write('Move: left'); }, 50);
+
   });
 
   return conn;
