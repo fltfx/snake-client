@@ -8,5 +8,5 @@ const { setupInput } = require('./input');
 
 //connection process is in progress
 console.log("Connecting ...");
-connect();
-setupInput();
+let newConnection = connect();
+setupInput(newConnection);
